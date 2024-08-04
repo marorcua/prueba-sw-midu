@@ -1,0 +1,29 @@
+{
+  "name": "prueba-tecnica-sw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "npm run start --workspaces",
+    "back:dev": "cd workspaces/backend && npm run dev",
+    "front:dev": "cd workspaces/frontend && npm run dev",
+    "dev": "concurrently \"npm run back:dev\" \"npm run front:dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7"
+  },
+  "workspaces": [
+    "./workspaces/*"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
